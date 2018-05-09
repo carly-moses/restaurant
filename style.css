@@ -20,8 +20,9 @@ h3 {
 .table-form-container {
     display: flex;
     margin: 20px; 
-
 }
+
+
 
 .table-container {
     height: 175px;
@@ -51,22 +52,22 @@ h3 {
     background-color: #CCC;  
     color: #ADAAAA; 
 }
-/*Table turns green if available when mouse is over*/
+/* Table turns green if available when mouse is over
 .available:hover {
     background-color: green; 
-}
+} */
 
 /* //Cursor Property - "not allowed" if the table's class is reserved*/
-.reserved {
-    background-color:#ADAAAA;
-    cursor: not-allowed;
-    color: #CCC; 
-}
+/* .reserved { */
+    /* background-color:#ADAAAA; */
+    /* cursor: not-allowed; */
+    /* color: #CCC;  */
+/* } */
 
-/*Table is red when reserved*/
+/* Table is red when reserved
 .reserved:hover {  
     background-color:red; 
-}
+} */
 
 
 .form-container {
@@ -80,7 +81,6 @@ h3 {
     text-align: left; 
     margin: 0 auto; 
     position: fixed; 
-    z-index: 1;
     left: 0;
     right: 0; 
 }
@@ -99,10 +99,19 @@ form {
     align-content: center; 
 }
 
+
+p {
+    margin-top:20px;
+    margin-bottom: 5px; 
+    font-size: 10px; 
+    color: black; 
+}
+
 i {
     position: absolute; 
     top:0;
     right:0; 
+    color: #ADAAAA; 
 }
 
 
@@ -124,6 +133,54 @@ input[type=button]{
     box-shadow: 0px 5px 15px 1px rgba(0,0,0,0.3);
 }
 
+@media only screen and (min-width:768){
+    /* Need to work on responsive at tablet size */
+}
+
 @media only screen and (min-width: 1200px) {
-/* Chose a good night sleep over desktop version - work in progress */
+
+h1 {
+ font-size: 60px;
+}
+
+h3 {
+    font-size: 30px; 
+}
+
+.table-container {
+    width: 500px;
+    height: 500px; 
+}
+
+#table {
+    width: 125px;
+    height: 125px; 
+    margin: 10px; 
+    font-size: 30px; 
+}
+
+.form-container {
+    height:500px;
+    width: 700px; 
+}
+
+h2 {
+    font-size: 50px; 
+}
+
+p {
+    font-size: 20px; 
+}
+
+input {
+    height: 30px;
+    width: 80%; 
+    margin-top:10px; 
+}
+
+input[type=button] {
+    width: 80%; 
+    height: 30px; 
+}
+
 }
