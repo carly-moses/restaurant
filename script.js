@@ -11,13 +11,13 @@ $(".available").on("click", (event) => {
     $(".form-container").fadeIn(1000);
     table = $(event.target); 
     //****trying to create a variable to access the table number for the form 
-    // tableNum = $(event.target).val(); //returns undefined
-    // console.log (tableNum); //console logs correctly
+    tableNum = $(event.target).text(); //returns empty
+    console.log (tableNum); //console logs correctly
+    $("")
 });
+    //****Trying to add table number when form pops up */
+$(".form-table-number").text(`Table Number: ${tableNum}`);
 
-        //Add table number reservation on the form
-        //******WORK IN PROGRESS*********/
-$("h2").append(`<p>Table Number: ${tableNum}</p>`);
 
 
         //If Table is open hover color green & grab cursor
@@ -46,13 +46,16 @@ $("#save").on("click", (event)=> {
 
           //Add element to create the new box with name and number of people at table
     //Returning in console array....need to append properly
-    reserveInfo = $("<div>");
-    reserveInfo.text(`
-        "<p>Name: ${tableName}</p>"
-        "<p>Number of People: ${people}</p>" 
+    reserveInfo = $("<div class='party-info'>");
+    reserveInfo.html(`
+        <p>Name: ${tableName}</p>
+        <p>Number of People: ${people}</p>
     `);
-    console.log(reserveInfo); 
-    reserveInfo.show(); 
+
+    table.append(reserveInfo)
+
+    // console.log(reserveInfo); 
+    // reserveInfo.show(); 
     });
 
 
@@ -60,8 +63,9 @@ $("#save").on("click", (event)=> {
 $(".table-container").on("mouseenter",".reserved",(event) => {
     $(event.target).css("backgroundColor","red"); 
     $(event.target).css("cursor", "not-allowed"); 
+
     reserveInfo.show(); 
-    $(event.target).append(reserveInfo); 
+    //$(event.target).append(reserveInfo).html(); 
 });
 
     // Reserved table changes color, but only when mouseleave, work on making it 

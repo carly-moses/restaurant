@@ -22,6 +22,22 @@ h3 {
     margin: 20px; 
 }
 
+.party-info {
+    width: 140px;
+    background-color: darkgrey;
+    border: 1px black solid;
+    border-radius: 5px; 
+    position: absolute;
+    top: 30px;
+    left: -50px;
+    z-index: 5555;
+}
+
+.party-info p {
+    margin: 5px 0; 
+    color: black; 
+}
+
 
 
 .table-container {
@@ -37,38 +53,26 @@ h3 {
     box-shadow: 0px 0px 31px 1px rgba(0,0,0,0.3);
 }
 
-#table {
+.table {
     height: 38px;
     width: 38px; 
     border-radius: 50%; 
     border: none; 
     margin: 8px; 
     text-align: center; 
+    position: relative;
 }
-/* When mouse moves over open table cursor says "available"*/
 .available {
     cursor: -webkit-grab; 
     cursor: grab;
     background-color: #CCC;  
     color: #ADAAAA; 
 }
-/* Table turns green if available when mouse is over
-.available:hover {
-    background-color: green; 
-} */
 
-/* //Cursor Property - "not allowed" if the table's class is reserved*/
-/* .reserved { */
-    /* background-color:#ADAAAA; */
-    /* cursor: not-allowed; */
-    /* color: #CCC;  */
-/* } */
-
-/* Table is red when reserved
-.reserved:hover {  
-    background-color:red; 
-} */
-
+.reserved {
+    color: #CCC;  
+    background-color: #ADAAAA; 
+}
 
 .form-container {
     display: none; 
@@ -99,13 +103,14 @@ form {
     align-content: center; 
 }
 
-
-p {
+.form-table-num {
     margin-top:20px;
     margin-bottom: 5px; 
+    margin-left: 35px; 
     font-size: 10px; 
-    color: black; 
+    color: black;
 }
+
 
 i {
     position: absolute; 
@@ -152,7 +157,7 @@ h3 {
     height: 500px; 
 }
 
-#table {
+.table {
     width: 125px;
     height: 125px; 
     margin: 10px; 
